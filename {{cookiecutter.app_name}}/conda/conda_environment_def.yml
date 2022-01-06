@@ -1,0 +1,16 @@
+name: {{cookiecutter.conda_env}}
+channels:
+  - defaults
+dependencies:
+  - python={{cookiecutter.python_version}}
+  - pip
+  - pip:
+    # Code Quality
+    - black
+    - isort
+    - pylint
+    - mypy
+    # Testing
+    - pytest
+    - pytest-cov
+    - pytest-sugar

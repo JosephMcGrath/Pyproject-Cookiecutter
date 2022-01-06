@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools >= 40.6.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+
+[tool.isort]
+profile = "black"
+skip_gitignore=true
+
+[tool.mypy]
+python_version = "3.9"
+ignore_missing_imports = true
+disallow_untyped_defs = true
+
+[tool.pylint.master]
+max-attributes=10
+max-args=8
+disable=[
+    # Formatting handled by Black
+    "line-too-long",
+]
+extension-pkg-allow-list="sqlite3"
+# Otherwise Pylint fails to find the module in tests.
+init-hook="from pylint.config import find_default_config_files; import os, sys; sys.path.append(os.path.dirname(list(find_default_config_files())[0]))"
+
+
+[tool.pylint.typecheck]
+ignored-classes=[
+]
+
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
