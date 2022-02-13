@@ -9,7 +9,7 @@
     "python.analysis.typeCheckingMode": "basic",
     "python.formatting.provider": "black",
     "python.terminal.activateEnvironment": true,
-    "python.pythonPath": "D:\\Anaconda3\\envs\\dnd_tools\\python.exe",
+    "python.pythonPath": "D:\\Anaconda3\\envs\\{{cookiecutter.module_name}}\\python.exe",
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,
     "cSpell.words": [
