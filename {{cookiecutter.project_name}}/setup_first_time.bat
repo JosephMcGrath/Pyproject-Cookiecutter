@@ -1,6 +1,9 @@
 @ECHO OFF
+REM First-time setup, should only need to be run once, then deleted.
+
 ECHO -= Initialise Git -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 git init
+git checkout -B "main"
 git stage -A
 git commit -m "Initial commit."
 

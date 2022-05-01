@@ -1,5 +1,6 @@
 {
-    "module_name" : "",
-    "conda_env" : "{{cookiecutter.module_name | lower | replace(' ' , '_') | replace('-' , '_') }}",
+    "project_name" : "",
+    "module_name" : "{{cookiecutter.project_name | lower | replace(' ' , '_') | replace('-' , '_') }}",
+    "conda_env" : "{{cookiecutter.module_name}}",
     "python_version" : "3.9"
 }
