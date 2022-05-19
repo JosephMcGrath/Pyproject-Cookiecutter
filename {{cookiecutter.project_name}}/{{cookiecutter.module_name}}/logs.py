@@ -17,7 +17,7 @@ def setup_logging(log_name: str, log_dir: Optional[str] = None) -> None:
         "formatters": {"console": {"format": "%(asctime)s:\t%(message)s"}},
         "handlers": {
             "console": {
-                "level": "WARNING",
+                "level": "INFO",
                 "class": "logging.StreamHandler",
                 "formatter": "console",
                 "stream": "ext://sys.stdout",
@@ -39,5 +39,6 @@ def setup_logging(log_name: str, log_dir: Optional[str] = None) -> None:
             "filename": os.path.join(log_dir, log_name + ".log"),
             "maxBytes": 1000000,
             "backupCount": 3,
+            "encoding": "utf-8",
         }
     logging.config.dictConfig(config)
